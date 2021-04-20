@@ -18,7 +18,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Dev-Caesar/error-404-page)
+- Repositry URL: [Add solution URL here](https://github.com/Dev-Caesar/error-404-page)
 - Live Site URL: [Add live site URL here](https://error-404-page-eight.vercel.app/)
 
 
