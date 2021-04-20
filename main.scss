@@ -1,0 +1,152 @@
+// || COLOR VARIABLES||
+$primary-color: #5f749c;
+$primary-color-dark: #212f4d;
+$primary-color-light: #c9dbfe;
+
+
+$secondary-color: #74baab;
+$secondary-color-2: #FFF3A1;
+// ||FONT VARIABLES
+$font-logo: "Inconsolata", sans-serif;
+$font-main: "Space Mono", sans-serif;
+// ||BASE STYLES||
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+body {
+  font-family: $font-main;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $primary-color-light;
+  padding: 2rem 2.5rem;
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  gap: 5rem;
+}
+
+// ||LOGO STYLES||
+.logo {
+  &__text {
+    font-family: $font-logo;
+    font-weight: 700;
+    color: $primary-color-dark;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: -0.3rem;
+  }
+}
+// ||MAIN STYLES||
+.container {
+  display: grid;
+  gap: 5rem;
+  max-width: 40rem;
+  justify-content: center;
+  // margin: 0 auto;
+  &__img-box {
+    align-items: center;
+  }
+  &__img {
+    width: 100%;
+    // height: auto;
+  }
+  &__body {
+    display: grid;
+    gap: 3rem;
+    justify-self: center;
+  }
+  .heading--1 {
+    font-family: $font-main;
+    font-size: 4.8rem;
+    line-height: 7.1rem;
+    color: $primary-color-dark;
+  }
+  &__paragraph {
+    color: $primary-color-dark;
+    font-size: 1.8rem;
+  }
+  &__btn-link:link,
+  &__btn-link:visited {
+    display: inline-block;
+    margin-top: 4rem;
+    font-family: $font-main;
+    font-weight: 700;
+    padding: 2.4rem 4.3rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #fff;
+    border: 2px solid $primary-color-dark;
+    outline: none;
+    justify-self: start;
+    align-self: center;
+    background-color: $primary-color-dark;
+    transition: all 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  &__btn-link:hover,
+  &__btn-link:active {
+    background-color: #fff;
+    border: 2px solid $primary-color-dark;
+    color: $primary-color-dark;
+  }
+}
+.author {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: $primary-color;
+  font-family: "Montserrat", sans-serif;
+
+  a:link,
+  a:visited {
+    position: relative;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: currentColor;
+    border-bottom: 3px solid currentColor;
+    transition: all 0.2s;
+  }
+  a:hover {
+    color: $primary-color-dark;
+  }
+}
+
+@media only screen and(min-width:700px) {
+  body {
+    align-content: center;
+    justify-content: center;
+
+  }
+  .container {
+    // grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+    grid-template-columns: minmax(20rem, 54rem) minmax(20rem, 60rem);
+    max-width: 144rem;
+    .heading--1 {
+      font-size: 5.5rem;
+    }
+    &__paragraph {
+      font-size: 2rem;
+      max-width: 50rem;
+    }
+    &__img-box {
+      align-self: center;
+      justify-self: center;
+    }
+    &__img {
+      width: 30rem;
+      height: auto;
+    }
+  }
+}
