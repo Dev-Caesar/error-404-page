@@ -12,7 +12,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./screenshot-desktop.png)
 ![](./screenshot-mobile.png)
 
 
